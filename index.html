@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>GATE2PubAnnotation by nikolamilosevic86</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>GATE2PubAnnotation</h1>
+        <p>Tool that transforms GATE annotated documents into PubAnnotations</p>
+
+        <p class="view"><a href="https://github.com/nikolamilosevic86/GATE2PubAnnotation">View the Project on GitHub <small>nikolamilosevic86/GATE2PubAnnotation</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/nikolamilosevic86/GATE2PubAnnotation/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/nikolamilosevic86/GATE2PubAnnotation/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/nikolamilosevic86/GATE2PubAnnotation">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h2>
+<a id="introduction-to-gate2pubannotation" class="anchor" href="#introduction-to-gate2pubannotation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introduction to GATE2PubAnnotation</h2>
+
+<p>GATE2PubAnnotation is a tool that transforms GATE annotated documents into PubAnnotations. This tool helps to publish your annotations made in GATE (General Architecture for Text Engineering) to PubAnnotation.org, where your annotations will be linked and publicly available. </p>
+
+<p>GATE2PubAnnotation tool is written in Java and requires Java virtual machine installed on the machine.</p>
+
+<h2>
+<a id="features" class="anchor" href="#features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Features</h2>
+
+<p>GATE2PubAnnotation currently supports only conversion of denotations into PubAnnotation, but not relationships (co-reference)</p>
+
+<h2>
+<a id="how-to-run" class="anchor" href="#how-to-run" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to run</h2>
+
+<p>GATEToPubAnnotation takes 3 parameters. The first one is file to GATE annotated file. The second is sourcedb (Source database) and the third one is sourceid (ID of the document in the database).</p>
+
+<p>Command line example:</p>
+
+<pre><code>java -jar GATE2PubAnnotation.jar example/example.xml PMC PMC125532
+</code></pre>
+
+<h2>
+<a id="useful-links-and-tools" class="anchor" href="#useful-links-and-tools" aria-hidden="true"><span class="octicon octicon-link"></span></a>Useful links and tools</h2>
+
+<ul>
+<li>PubAnnotation: <a href="http://www.pubannotation.org/">http://www.pubannotation.org/</a>
+</li>
+<li>GATE: <a href="https://gate.ac.uk">https://gate.ac.uk</a>
+</li>
+<li>Text Annotation Editor: <a href="http://textae.pubannotation.org/">http://textae.pubannotation.org/</a>
+</li>
+<li>My blog: <a href="http://inspiratron.org">http://inspiratron.org</a>
+</li>
+</ul>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/nikolamilosevic86">nikolamilosevic86</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
