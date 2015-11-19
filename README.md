@@ -9,7 +9,9 @@ Tool that transforms GATE annotated documents into PubAnnotations. This tool is 
 # How to run
 
 Command line example:
-''' java -jar GATE2PubAnnotation.jar example/example.xml '''
+``` 
+java -jar GATE2PubAnnotation.jar example/example.xml
+```
 
 # Useful links and tools
 
