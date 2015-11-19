@@ -21,13 +21,15 @@ public class GATE2PubAnnotaiton {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		if(args.length<1)
+		if(args.length<3)
 		{
 			System.out.println("You need to specify filepath of the GATE Annotated document");
-			System.out.println("Example of command: java -jar GATE2PubAnnotation.jar /example/example.xml");
+			System.out.println("Example of command: java -jar GATE2PubAnnotation.jar /example/example.xml PMC 123");
 			return;
 		}
 		String pathOfDataSet = args[0];
+		String sourcedb = args[1];
+		String sourceid = args[2];
 		System.out.println("Processing: "+pathOfDataSet);
 		try {
 			BufferedReader reader = new BufferedReader(new FileReader(
@@ -76,7 +78,7 @@ public class GATE2PubAnnotaiton {
 				}
 			}
 			String[] splits = pathOfDataSet.split("/");
-			toPubAnnotation(splits[splits.length-1]);
+			toPubAnnotation(splits[splits.length-1],sourcedb,sourceid);
 		} catch (Exception ex) {
 			System.out.println("Wups, something went wrong! Please check whether document you provided is the right GATE annotated file");
 			ex.printStackTrace();
@@ -86,7 +88,7 @@ public class GATE2PubAnnotaiton {
 
 	}
 
-	public static void toPubAnnotation(String fileName) {
+	public static void toPubAnnotation(String fileName, String Sourcedb,String sourceid) {
 		File theDir = new File("output");
 
 		// if the directory does not exist, create it
@@ -106,6 +108,8 @@ public class GATE2PubAnnotaiton {
 		}
 		JSONObject js = new JSONObject();
 		js.put("text", text);
+		js.put("sourcedb", Sourcedb);
+		js.put("sourceid", sourceid);
 		JSONArray denotations = new JSONArray();
 
 		// JSONArray modifications = new JSONArray();
