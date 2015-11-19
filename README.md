@@ -8,9 +8,11 @@ Tool that transforms GATE annotated documents into PubAnnotations. This tool is 
 
 # How to run
 
+GATEToPubAnnotation takes 3 parameters. The first one is file to GATE annotated file. The second is sourcedb (Source database) and the third one is sourceid (ID of the document in the database).
+
 Command line example:
 ``` 
-java -jar GATE2PubAnnotation.jar example/example.xml
+java -jar GATE2PubAnnotation.jar example/example.xml PMC PMC125532
 ```
 
 # Useful links and tools
