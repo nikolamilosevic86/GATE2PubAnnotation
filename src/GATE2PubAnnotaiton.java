@@ -21,8 +21,14 @@ public class GATE2PubAnnotaiton {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		if(args.length<1)
+		{
+			System.out.println("You need to specify filepath of the GATE Annotated document");
+			System.out.println("Example of command: java -jar GATE2PubAnnotation.jar /example/example.xml");
+			return;
+		}
 		String pathOfDataSet = args[0];
-		System.out.println(pathOfDataSet);
+		System.out.println("Processing: "+pathOfDataSet);
 		try {
 			BufferedReader reader = new BufferedReader(new FileReader(
 					pathOfDataSet));
@@ -43,7 +49,6 @@ public class GATE2PubAnnotaiton {
 			for (int j = 0; j < nodes.getLength(); j++) {
 				Element element = (Element) nodes.item(j);
 				text = element.getTextContent();
-				System.out.print(text);
 			}
 			NodeList nodes2 = parse.getElementsByTagName("AnnotationSet");
 			for (int j = 0; j < nodes2.getLength(); j++) {
@@ -73,8 +78,11 @@ public class GATE2PubAnnotaiton {
 			String[] splits = pathOfDataSet.split("/");
 			toPubAnnotation(splits[splits.length-1]);
 		} catch (Exception ex) {
+			System.out.println("Wups, something went wrong! Please check whether document you provided is the right GATE annotated file");
 			ex.printStackTrace();
 		}
+		
+		System.out.println("Processing done! You can find .json files in output folder. Thank you for using GATE2PubAnnotation!");
 
 	}
 
